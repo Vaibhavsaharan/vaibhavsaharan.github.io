@@ -1,8 +1,14 @@
-## Welcome to GitHub Pages
+## BIO
 
-You can use the [editor on GitHub](https://github.com/Vaibhavsaharan/vaibhavsaharan.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files. im vaibhav.
+HI humans,
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This page is indication that i have started working on Github...
+
+Happy Developing.. :D
+
+### Education
+
+I passed my 12th class from Ajmer and currently I am prusing my btech from IIT MANDI. I am graduating in Computer Science.
 
 ### Markdown
 
