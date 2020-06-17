@@ -1,0 +1,199 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    height: 100%;
+}
+#navbar {
+    overflow: hidden;
+    opacity: 1;
+  }
+  
+  /* Links inside the navbar */
+#navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 24px 40px;
+    text-decoration: none;
+}
+  
+  /* Change background on mouse-over */
+#navbar a:hover {
+    color: teal;
+}
+.normal {
+    position: fixed;
+    color: #f2f2f2;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    transition-timing-function: ease-in;
+    transition: 0.3s;
+  }
+.showit {
+    background-color: f9f9f9;
+    color: rgb(5, 8, 8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 70px;
+    transition-timing-function: ease-in;
+    transition: 1s;
+  }
+.entryPage {
+    background-image: url(images/back.jpg);
+    background-size: cover;
+    font-family: Muli;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+.entry {
+    color: whitesmoke;
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content */
+.mainbody {
+    display: block;
+    padding: 0;
+}
+
+#name{
+    font-weight: 600;
+    font-size: 70px;
+    color: rgb(68, 241, 241);
+}
+
+.pesha{
+    font-size: 33px;
+}
+
+.about{
+    background-color: rgb(241, 241, 240);
+}
+
+.spec1{
+    font-size: 15px;
+    color:grey;
+    padding: 80px 10px 20px 140px;
+}
+.spec2{
+    font-size: 15px;
+    color:grey;
+    padding: 80px 10px 20px 80px;
+}
+
+.spec1 h1:hover{
+    color: aquamarine;
+    transition: 1s;
+}
+#Description{
+    margin: 0;
+    padding: 10px 50px 0px 140px;
+    font-weight: 1;
+    font-size: xx-large;
+}
+#email a{
+    padding: 0px 0px 30px 140px;
+    font-size: 50px;
+    font-weight: 100;
+    color: rgb(41, 187, 187);
+    text-decoration: none;
+}
+.social{
+    color:grey;
+    display: inline-block;
+    padding: 0px 20px 150px 140px;
+}
+.social a{
+    display: inline-block;
+    text-align: center;
+    padding-right: 20px;
+    text-decoration: none;
+    color: rgb(155, 150, 150);
+    font-size: 20px;
+}
+
+.social a:hover{
+    color: rgb(155, 150, 200);
+    border-radius: 2px;
+    border-bottom-color: red;
+    transition: .3s ease-in;
+}
+.column {
+    float: left;
+    width: 30%;
+    padding: 0 10px;
+    
+}
+.project{
+    padding-top: 100px;
+}
+.row {
+    
+    margin-left: 55px;
+    margin-bottom: 40px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    padding-top: 90px;
+    height: 300px;
+    background-color: rgb(197, 231, 231);
+}
+.card p{
+    font-size: 20px;
+    color: rgb(155, 151, 151);
+}
+.card a{
+    position: relative;
+    margin-top: 400px;
+    font-size: 30px;
+    color: rgb(95, 90, 90);
+    text-decoration: none;
+}
+.extra {
+    background-image: url(images/track.jpg);
+    background-size: cover;
+    font-family: Muli;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+.experi{
+    margin-top: -35px;
+    background-color: rgb(29, 29, 29);
+}
+.rowexp{
+    padding: 50px 140px;
+    display: flex;
+    flex-direction: row;
+}
+.colexp{
+    margin-right: 170px;
+}
+.spec3{
+    font-size: 15px;
+    margin: 40px 140px;
+}
