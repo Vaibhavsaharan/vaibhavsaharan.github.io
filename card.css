@@ -165,8 +165,9 @@ figcaption {
     background-size: cover;
 }
 #back1{
-    background-image: url(images/github1.png);
-    background-size: auto;
+    background-image: url(images/github3.v2.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .card-front .img-bg::before {
