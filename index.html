@@ -5,6 +5,7 @@
         <script src="main.js"></script> 
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="card.css">
     </head>
     <body>
         <div id="navbar">
@@ -33,28 +34,113 @@
             </div>
             <div id="Projects" class="project">
                 <h1 class="spec2">My projects</h1>
+                <!-- flip-card-container -->
+                <div class="flip-card-container" style="--hue: 170">
+                    <div class="flip-card">
+                
+                    <div id="front1" class="card-front">
+                        <figure>
+                        <div  class="img-bg"></div>
+                        <!-- <img style="background-size: cover;" src="images/windo1.jfif" alt="Image 2"> -->
+                        <figcaption>RTOMS</figcaption>
+                        </figure>
+                        <ul>
+                        <li>Windows Application</li>
+                        <li>Database project</li>
+                        </ul>
+                    </div>
+                
+                    <div id = "back1" class="card-back">
+                        <figure>
+                        <div class="img-bg"></div>
+                        <!-- <img style="background-size: cover; size: 100px;" src="images/github1.png" alt="image-2"> -->
+                        </figure>
+                
+                        <button id="button1" onclick="window.location.href='https://github.com/Vaibhavsaharan/RTOMS';">Github</button>
+                
+                        
+                    </div>
+                
+                    </div>
+                </div>
+                <div class="flip-card-container" style="--hue: 170">
+                    <div class="flip-card">
+                
+                    <div id="front2" class="card-front">
+                        <figure>
+                        <div  class="img-bg"></div>
+                        <!-- <img style="background-size: cover;" src="images/windo1.jfif" alt="Image 2"> -->
+                        <figcaption>UI-CFD</figcaption>
+                        </figure>
+                        <ul>
+                        <li>Ubuntu Application</li>
+                        <li>Large Application project</li>
+                        </ul>
+                    </div>
+                
+                    <div id = "back1" class="card-back">
+                        <figure>
+                        <div class="img-bg"></div>
+                        <!-- <img style="background-size: cover; size: 100px;" src="images/github1.png" alt="image-2"> -->
+                        </figure>
+                
+                        <button id="button2" onclick="window.location.href='https://github.com/Vaibhavsaharan/Unified-Interface-for-CFD-Softwares';">Github</button>
+                
+                        
+                    </div>
+                
+                    </div>
+                </div>
+                <div class="flip-card-container" style="--hue: 170">
+                    <div class="flip-card">
+                
+                    <div id="front3" class="card-front">
+                        <figure>
+                        <div  class="img-bg"></div>
+                        <!-- <img style="background-size: cover;" src="images/windo1.jfif" alt="Image 2"> -->
+                        <figcaption>Weather-Display</figcaption>
+                        </figure>
+                        <ul>
+                        <li>Web Application</li>
+                        <li>Web-dev project</li>
+                        </ul>
+                    </div>
+                
+                    <div id = "back1" class="card-back">
+                        <figure>
+                        <div class="img-bg"></div>
+                        <!-- <img style="background-size: cover; size: 100px;" src="images/github1.png" alt="image-2"> -->
+                        </figure>
+                
+                        <button>Coming Soon</button>
+                
+                    </div>
+                
+                    </div>
+                </div>
                 <div class="row">
                     <div id="wind" class="column">
                       <div class="card">
-                        <a href="https://github.com/Vaibhavsaharan/RTOMS">RTOMS</a>
-                        <p>Windows Application</p>
-                        <p>Database project</p>
+                        <h1>E-TOILET</h1>
+                        <p>An self sufficient Hi-Tec toilet</p>
+                        <p>Design practicum project</p>
+                        <p>Won Bronze Medal</p>
                       </div>
                     </div>
                   
                     <div class="column">
                       <div class="card">
-                        <a href="https://github.com/Vaibhavsaharan/Unified-Interface-for-CFD-Softwares">UI-CFD</a>
-                        <p>Ubuntu Application</p>
-                        <p>Large Application project</p>
+                        <h1>Text to braille Converter</h1>
+                        <p>A project</p>
+                        <p>takes sentences as input from computer and prints respective Braille codes for it</p>
                       </div>
                     </div>
                     
                     <div class="column">
                       <div class="card">
-                        <a>Weather-Display</a>
-                        <p>Web Application</p>
-                        <p>web-dev project</p>
+                        <h1>Bayes Classiﬁer</h1>
+                        <p>A Bayes Classiﬁer using Gaussian Mixture Model</p>
+                        <p>initialised by K-Means clustering</p>
                       </div>
                     </div>
                   </div>

@@ -6,6 +6,13 @@ window.onload = function start() {
 
 }
 window.onscroll = function() {myFunction()};
+function openWin1() {
+  window.open("https://github.com/Vaibhavsaharan/RTOMS");
+}
+function openWin2() {
+  window.open("https://github.com/Vaibhavsaharan/Unified-Interface-for-CFD-Softwares");
+}
+
 
 function myFunction() {
     console.log(window.pageYOffset);
