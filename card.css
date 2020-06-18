@@ -150,19 +150,19 @@ figcaption {
   clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
 }
 #front1{
-    background-image: url(images/windows.png);
+    background-image: url(images/windowshero.png);
     background-position: center;
-    background-size: auto;
+    background-size: cover;
 }
 #front2{
-    background-image: url(images/ubuntu1.jfif);
+    background-image: url(images/ubuntuhero.jpg);
     background-position: center;
-    background-size: auto;
+    background-size: cover;
 }
 #front3{
-    background-image: url(images/chrome1.jfif);
+    background-image: url(images/chromehero.jpg);
     background-position: center;
-    background-size: auto;
+    background-size: cover;
 }
 #back1{
     background-image: url(images/github1.png);
