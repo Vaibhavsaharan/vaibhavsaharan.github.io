@@ -1,0 +1,29 @@
+{
+  "name": "vaibhavsaharan.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vaibhavsaharan/vaibhavsaharan.github.io.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Vaibhav Saharan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vaibhavsaharan/vaibhavsaharan.github.io/issues"
+  },
+  "homepage": "https://github.com/Vaibhavsaharan/vaibhavsaharan.github.io#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "webtorrent-hybrid": "^4.0.3"
+  }
+}
