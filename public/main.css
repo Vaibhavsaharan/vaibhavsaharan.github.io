@@ -46,7 +46,7 @@ body{
     transition: 1s;
   }
 .entryPage {
-    background-image: url(../images/back.jpg);
+    background-image: url(./images/back.jpg);
     background-size: cover;
     font-family: Muli;
     top: 0;
@@ -175,7 +175,7 @@ body{
     text-decoration: none;
 }
 .extra {
-    background-image: url(../images/track.jpg);
+    background-image: url(./images/track.jpg);
     background-size: cover;
     font-family: Muli;
     top: 0;
