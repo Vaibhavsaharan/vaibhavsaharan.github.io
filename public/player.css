@@ -7,7 +7,6 @@ margin-left: auto;
 margin-right: auto;
 height: 84%;
 width: 74%;
-:focus{outline: none;}
 }
 #progressBar {
 	height: 5px;
@@ -79,41 +78,16 @@ a:link, a:visited {
 	border: 2px;
 }
 
-$colors: (
-  fill: #a972cb,
-  pulse: #ef6eae, 
-  close: #ff7f82, 
-  raise: #ffa260, 
-  up: #e4cb58, 
-  slide: #8fc866, 
-  offset: #19bc8b
-);
 
-// Sass variables compile to a static string; CSS variables are dynamic and inherited
-  // Loop through the map and set CSS custom properties using Sass variables
-@each $a, $color in $colors {
-  .#{$a} {
-    --color: #{$color};
-    --hover: #{adjust-hue($color, 45deg)};
-  }
-}
 
-// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+
 a {  
-  color: var(--color);
+  color: #ffa260;
   transition: 0.25s;
-  
-  &:hover,
-  &:focus { 
-    border-color: var(--hover);
-    color: #fff;
-  }
 }
 
 #Downloadfiles a:hover {
-	// background-color: #555;
-	// color: #2a3749;
-	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	box-shadow: 0 0.5em 0.5em -0.4em #ffa260,;
     transform: translateY(-0.25em);
 }
 
@@ -125,8 +99,3 @@ a {
 	background-color: #ccc;
 }
 
-.raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-}
