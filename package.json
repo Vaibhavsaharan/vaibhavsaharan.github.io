@@ -24,6 +24,9 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "jquery": "^3.5.1",
+    "plyr": "^3.6.3",
+    "pretty-bytes": "^5.5.0",
     "webtorrent-hybrid": "^4.0.3"
   }
 }

@@ -3,58 +3,47 @@
   <head>
     <meta charset="UTF-8">
     <title>Movie</title>
+    <link rel="stylesheet" href="./player.scss">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
     <script src="../dist/bundle.js"></script>
-    <script src="http://momentjs.com/downloads/moment.min.js"></script>
-    <style>
-      #output video {
-        width: 100%;
-      }
-      #progressBar {
-          height: 5px;
-          width: 0%;
-          background-color: #35b44f;
-          transition: width .4s ease-in-out;
-      }
-      body.is-seed .show-seed {
-          display: inline;
-      }
-      body.is-seed .show-leech {
-          display: none;
-      }
-      .show-seed {
-          display: none;
-      }
-      #status code {
-          font-size: 90%;
-          font-weight: 700;
-          margin-left: 3px;
-          margin-right: 3px;
-          border-bottom: 1px dashed rgba(255,255,255,0.3);
-      }
-
-      .is-seed #hero {
-          background-color: #154820;
-          transition: .5s .5s background-color ease-in-out;
-      }
-      #hero {
-          background-color: #2a3749;
-      }
-      #status {
-          color: #fff;
-          font-size: 17px;
-          padding: 5px;
-      }
-      a:link, a:visited {
-          color: #30a247;
-          text-decoration: none;
-      }
-    </style>
+    <!-- <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+    <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              const player = Plyr.setup('.js-player');
+          });
+    </script> -->
   </head>
   <body>
     <div id="hero">
       <div id="output">
+        
         <div id="progressBar"></div>
         <!-- The video player will be added here -->
+        <video  id="players"  poster="./images/black.jpg" type="video/mp4"></video>
       </div>
+      <!-- Statistics -->
+      <div id="status">
+        <div>
+          <span class="show-leech">Streaming </span>
+          <span class="show-seed">Seeding </span>
+          <code id="streamedFileName"></code>
+          <span class="show-leech"> from </span>
+          <span class="show-seed"> to </span>
+          <code id="numPeers">0 peers</code>
+        </div>
+    
+        <div>
+          <code id="downloaded"></code> of <code id="total"></code> - <span id="remaining"></span>
+        </div>
+    
+        <div>
+          &#x2193; <code id="downloadSpeed">0 b/s</code> / <code id="uploadSpeed">0 b/s</code> &#x2191;
+        </div>
+      </div>
+      <div id="Downloadfiles">
+        <h2 id="dd" style="display: none;">Download files..</h2>
+        <h2 id="pp" style="display: block;">Please wait...</h2>
+      </div>
+    </div>
   </body>
 </html>
