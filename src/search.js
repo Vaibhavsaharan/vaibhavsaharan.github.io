@@ -1,5 +1,6 @@
-
+var $ = require( "jquery" );
 function search(){
+  
     var movie_name = document.getElementById('movie_input').value
     var request = new XMLHttpRequest()
     var site = 'https://api.sumanjay.cf/torrent/?query='
