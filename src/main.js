@@ -1,4 +1,5 @@
 if(document.URL.search("public") === -1){
+  window.$ = window.jQuery = require('jquery')
   window.onload = function start() {
       navbar.classList.remove("showit");
       navbar.classList.add("normal");
