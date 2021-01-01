@@ -4,7 +4,7 @@ if(document.URL.search("public") === -1){
       navbar.classList.remove("showit");
       navbar.classList.add("normal");
       window.scroll(0,0);
-      console.log("started");
+      console.log("started 1.1");
 
   }
   window.onscroll = function() {myFunction()};
