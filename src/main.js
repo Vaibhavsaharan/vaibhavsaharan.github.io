@@ -1,4 +1,4 @@
-if(document.URL.search("index") !== -1){
+if(document.URL.search("public") === -1){
   window.onload = function start() {
       navbar.classList.remove("showit");
       navbar.classList.add("normal");
