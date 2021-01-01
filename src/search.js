@@ -1,6 +1,5 @@
 
 function search(){
-    window.$ = window.jQuery = require('jquery')
     var movie_name = document.getElementById('movie_input').value
     var request = new XMLHttpRequest()
     var site = 'https://api.sumanjay.cf/torrent/?query='
@@ -10,7 +9,8 @@ function search(){
 
     request.onload = function () {
         // Begin accessing JSON data here
-        var opt = $('#typ').find(":selected").text();
+        var s = document.getElementById('typ')
+        var opt = s.selectedOptions[0].label;
         console.log("selected " + opt)
         var table = document.getElementById("movietable");
         table.innerHTML = "";
