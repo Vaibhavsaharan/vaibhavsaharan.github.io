@@ -1,7 +1,6 @@
 
 function search(){
     var movie_name = document.getElementById('movie_input').value
-    console.log(movie_name)
     var request = new XMLHttpRequest()
     var site = 'https://api.sumanjay.cf/torrent/?query='
     site = site.concat(movie_name)
@@ -22,7 +21,7 @@ function search(){
         var peer = row.insertCell(4);
         var play = row.insertCell(5);
         srno.innerHTML = "SR No";
-        name.innerHTML = "Movie Name";
+        name.innerHTML = "Name";
         size.innerHTML = "Size";
         seed.innerHTML = "Seeds";
         peer.innerHTML = "Peers";
@@ -39,7 +38,6 @@ function search(){
           var j = 1
           for(i=0;i<data.length;i++) {
             var result = data[i]
-            console.log(result.name + result.type.search(opt))
             if(opt === "Movie"){
               if(result.nsfw === true){
                 continue;
@@ -81,8 +79,7 @@ function search(){
             peer.innerHTML = result.leecher;
             mag.innerHTML = result.magnet;
             mag.style.display = "none";
-            playbtn.innerHTML = "<input type='button' value='play/' id='\j\' class='btnEdits'/>"
-            console.log(playbtn)
+            playbtn.innerHTML = "<input type='button' value='Play' id='\j\' class='btnEdits'/>"
             playbtn.addEventListener('click',function(){  
               gein($(this)[0].parentNode.children[6].textContent)
             });

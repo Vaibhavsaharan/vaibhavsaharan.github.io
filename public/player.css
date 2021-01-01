@@ -1,12 +1,16 @@
 body{
-	background-color: black;
+	background-color: #2a3749;
 }
 #output video {
-display: block;
-margin-left: auto;
-margin-right: auto;
-height: 84%;
-width: 74%;
+	margin-top: 55px;
+	margin-bottom: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 74%;
+	box-shadow: rgb(18, 17, 17) 12px 20px 30px -10px;
+
 }
 #progressBar {
 	height: 5px;
