@@ -1,6 +1,5 @@
 
 function search(){
-    console.log("aya")
     var movie_name = document.getElementById('movie_input').value
     console.log(movie_name)
     var request = new XMLHttpRequest()
@@ -11,7 +10,8 @@ function search(){
 
     request.onload = function () {
         // Begin accessing JSON data here
-        console.log(this.response)
+        var opt = $('#typ').find(":selected").text();
+        console.log("selected " + opt)
         var table = document.getElementById("movietable");
         table.innerHTML = "";
         var row = table.insertRow(0)
@@ -28,38 +28,73 @@ function search(){
         peer.innerHTML = "Peers";
         play.innerHTML = "Play";
         var data = JSON.parse(this.response)
+        // var xy = data[0]
+        // console.log(xy)
+        // console.log(xy.type)
+        console.log(data)
+        
       
         if (request.status >= 200 && request.status < 400) {
-            var i = 1
-          data.forEach((result) => {
+          var i = 1
+          var j = 1
+          for(i=0;i<data.length;i++) {
+            var result = data[i]
+            console.log(result.name + result.type.search(opt))
+            if(opt === "Movie"){
+              if(result.nsfw === true){
+                continue;
+              }
+              if(result.type.search(opt) === -1){
+                
+                continue;
+              }
+            }
+            if(opt == "TV Series"){
+              if(result.type.search("TV") === -1){
+                continue;
+              }
+            }
+            if(opt === "Music"){
+              if(result.type.search(opt) === -1){
+                continue;
+              }
+            }
+            if(opt === "NSFW"){
+              if(result.nsfw === false){
+                continue;
+              }
+            }
             var table = document.getElementById("movietable");
-            var row = table.insertRow(i);
+            var row = table.insertRow(j);
             var srno = row.insertCell(0);
             var name = row.insertCell(1);
             var size = row.insertCell(2);
             var seed = row.insertCell(3);
             var peer = row.insertCell(4);
             var playbtn = row.insertCell(5);
-            row.setAttribute("id",i);
-            srno.innerHTML = i;
+            var mag = row.insertCell(6);
+            row.setAttribute("id",j);
+            srno.innerHTML = j;
             name.innerHTML = result.name;
             size.innerHTML = result.size;
             seed.innerHTML = result.seeder;
             peer.innerHTML = result.leecher;
-            playbtn.innerHTML = "<input type='button' value='play' name='btnEdit' class='btnEdits'/>"
-            playbtn.addEventListener('click',function(){
-                clickk(result.magnet);
+            mag.innerHTML = result.magnet;
+            mag.style.display = "none";
+            playbtn.innerHTML = "<input type='button' value='play/' id='\j\' class='btnEdits'/>"
+            console.log(playbtn)
+            playbtn.addEventListener('click',function(){  
+              gein($(this)[0].parentNode.children[6].textContent)
             });
-            i = i+1;
-          })
+            j = j+1;
+          }
         } else {
           console.log('error')
         }
     }
     request.send()
 }
-function clickk(e){
-    console.log(e);
-    sessionStorage.setItem("magnetlink",e);
-    window.location.href="./watchmovie.html";
+function gein(m){
+  sessionStorage.setItem("magnet",m);
+  window.location.href="./watchmovie.html";
 }

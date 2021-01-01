@@ -2,9 +2,8 @@ var moment = require('moment')
 var prettyBytes = require('pretty-bytes')
 window.$ = window.jQuery = require('jquery')
 var WebTorrent = require('webtorrent-hybrid')
-var torrentId = sessionStorage.getItem("magnetlink")
-//var torrentId = 'https://webtorrent.io/torrents/sintel.torrent'
-console.log(torrentId);
+var torrentId = sessionStorage.getItem("magnet")
+console.log("received " + torrentId);
 var client = new WebTorrent()
 
 
@@ -40,6 +39,12 @@ client.add(torrentId, function (torrent) {
         }
         file = largestFile
     })
+    var newTitle = "Watch : " + file.name
+    if (document.title != newTitle) {
+        document.title = newTitle;
+    }
+    // $('meta[name="description"]').attr("content", newDescription);
+
     var x = document.getElementById("Downloadfiles");
     x.style.display = "none";
 

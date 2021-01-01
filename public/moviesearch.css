@@ -41,7 +41,7 @@ html, body {
   filter: drop-shadow(0 1px #0091c2);
 }
 
-.search > div:after {
+.search .s > div:after {
   content: "";
   background: white;
   width: 4px;
@@ -186,4 +186,15 @@ h2{
         display: block;
         text-align: center;
     }
+}
+#option select{
+  margin-left: 30px;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #60666d;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  position: relative;
+  padding: 6px 10px;
 }

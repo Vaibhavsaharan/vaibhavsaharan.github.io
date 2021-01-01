@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search movie</title>
+    <link rel="icon" href="images/ghost.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="moviesearch.css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="../dist/bundle.js"></script>
@@ -17,11 +18,20 @@
         <div class="search">
             <h1>Search your movie</h1>
             <h3>Click on search icon, then type your keyword.</h3>
-            <div>
+            <div class="s" style="display: inline-block;">
                 <input type="text" id="movie_input" placeholder="Search . . ." onkeyup="search()">
+            </div>
+            <div id="option" style="display: inline-block;">
+                <select name="type" id="typ" onmousedown="search()">
+                    <option value="movie">Movie</option>
+                    <option value="tv">TV Series</option>
+                    <option value="music">Music</option>
+                    <option value="nsfw">NSFW</option>
+                </select>
             </div>
     </div>
     </div>
+    
     <div id="root" class="table-wrapper">
         <table id="movietable" class="fl-table">
             <thead>

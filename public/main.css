@@ -18,7 +18,10 @@ body{
     text-align: center;
     padding: 24px 40px;
     text-decoration: none;
-    color: blueviolet;
+    color: #333366;
+}
+#navbar a:visited {
+    color: #333366;
 }
   
   /* Change background on mouse-over */
