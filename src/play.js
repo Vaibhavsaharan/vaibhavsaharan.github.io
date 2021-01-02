@@ -104,7 +104,7 @@ if(document.URL.search("watch") !== -1){
                     var a = document.createElement('a')
                     a.download = file.name
                     a.href = url
-                    a.textContent = 'Download ' + file.name
+                    a.textContent = file.name
                     var x = document.getElementById("Downloadfiles")
                     x.appendChild(a)
                 })
