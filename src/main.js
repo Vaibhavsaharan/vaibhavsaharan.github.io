@@ -5,7 +5,7 @@ if(document.URL.search("public") === -1){
       navbar.classList.remove("showit");
       navbar.classList.add("normal");
       window.scroll(0,0);
-      console.log("started 1.7");
+      console.log("started 1.0.8");
 
   }
   window.onscroll = function() {myFunction()};
@@ -18,7 +18,6 @@ if(document.URL.search("public") === -1){
 
 
   function myFunction() {
-      console.log(window.pageYOffset);
     if (window.pageYOffset < 30) {
       navbar.classList.remove("showit");
       navbar.classList.add("normal");
