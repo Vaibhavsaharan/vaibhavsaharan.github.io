@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+:root{
+  --dis: none;
+}
 
 * {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -158,9 +160,9 @@ h2{
 
 input {
   padding: 3px;
-  background-color: lightblue;
-  color: rgb(12, 12, 49);
-  box-shadow: 0 3px 5px -2px;
+  background-color: #55c7ed;
+  color: white;
+  box-shadow: 0 1px 2px -4px;
   border: none;
 }
 
@@ -305,7 +307,7 @@ svg{
     }
     .table-wrapper:before{
         content: "Scroll horizontally >";
-        display: block;
+        display: var(--dis);
         text-align: right;
         font-size: 11px;
         color: white;

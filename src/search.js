@@ -3,11 +3,12 @@ script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
   function search(){   
-    var load = document.getElementById('idloader')
-    load.style.display = "flex";
+    
       var movie_name = document.getElementById('movie_input').value
       if(movie_name.length === 0)
       return;
+      var load = document.getElementById('idloader')
+      load.style.display = "flex";
       var request = new XMLHttpRequest()
       var site = 'https://api.sumanjay.cf/torrent/?query='
       site = site.concat(movie_name)
@@ -19,6 +20,10 @@ document.getElementsByTagName('head')[0].appendChild(script);
           var s = document.getElementById('typ')
           var opt = s.selectedOptions[0].label;
           console.log("selected " + opt)
+          if(window.innerWidth < 767){
+            var styleElem = document.head.appendChild(document.createElement("style"));
+            styleElem.innerHTML = ".table-wrapper:before {display: block;}";
+          }
           var table = document.getElementById("movietable");
           table.innerHTML = "";
           var row = table.insertRow(0)
