@@ -38,7 +38,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
           size.innerHTML = "Size";
           seed.innerHTML = "Seeds";
           peer.innerHTML = "Peers";
-          play.innerHTML = "Play";
+          play.innerHTML = "Action";
           var data = JSON.parse(this.response)
           // var xy = data[0]
           // console.log(xy)
