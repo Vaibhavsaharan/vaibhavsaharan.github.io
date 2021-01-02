@@ -102,4 +102,16 @@ a {
 #Downloadfiles a:visited {
 	background-color: #ccc;
 }
+.footers{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	color: #fff;
+}
+.footers p {
+	margin: 0px;
+}
+.footers a {
+	margin-top: 3px;
+}
 
