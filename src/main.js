@@ -1,10 +1,11 @@
+window.$ = window.jQuery = require('jquery')
 if(document.URL.search("public") === -1){
-  window.$ = window.jQuery = require('jquery')
+  
   window.onload = function start() {
       navbar.classList.remove("showit");
       navbar.classList.add("normal");
       window.scroll(0,0);
-      console.log("started 1.6");
+      console.log("started 1.7");
 
   }
   window.onscroll = function() {myFunction()};
