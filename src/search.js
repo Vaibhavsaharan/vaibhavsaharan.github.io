@@ -4,6 +4,8 @@ script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
   function search(){   
       var movie_name = document.getElementById('movie_input').value
+      if(movie_name.length === 0)
+      return;
       var request = new XMLHttpRequest()
       var site = 'https://api.sumanjay.cf/torrent/?query='
       site = site.concat(movie_name)
