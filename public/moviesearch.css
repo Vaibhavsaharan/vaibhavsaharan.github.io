@@ -50,8 +50,9 @@ h1,h3 {
   height: 20px;
   transform: rotate(135deg);
   position: relative;
-  left: 40px;
+  left: 38px;
   transition: transform 0.5s ;
+  top: -8px;
 }
 
 .sbox > div > input {
@@ -84,23 +85,23 @@ h1,h3 {
 }
 
 #movie_input:focus + #line{
-  transform: translateX(215px) rotate(135deg);
+  transform: translateX(210px) rotate(135deg);
   /* left: 0px; */
 }
 #movie_input:not(:placeholder-shown) + #line{
-  transform: translateX(215px) rotate(135deg);
+  transform: translateX(210px) rotate(135deg);
 }
 
 .sbox{
   display: inline-flex;
 }
 .example_e {
-  margin-left: 40px;
+  margin-left: 30px;
   border: none;
   background: #ffffff;
   color: #353535 !important;
   font-weight: 500;
-  padding: 14px;
+  padding: 11px;
   border-radius: 6px;
   display: inline-block;
   transition: all 0.3s ease 0s;
@@ -152,6 +153,7 @@ h2{
   background-color: linear-gradient(to top,#2bb3e0,#55c7ed 33%);
   appearance: menulist-button;
   outline: none;
+  margin-top: -3px;
 }
 
 input {

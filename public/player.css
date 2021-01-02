@@ -59,7 +59,7 @@ a:link, a:visited {
 
 #Downloadfiles{
 	background-color:transparent;
-	width: 50%;
+	width: 40%;
 	margin-left: auto;
 	margin-right: auto;
 	font: 300 1em 'Fira Sans', sans-serif;
@@ -82,16 +82,9 @@ a:link, a:visited {
 	border: 2px;
 }
 
-
-
-
-a {  
-  color: #ffffff;
-  transition: 0.25s;
-}
-
 #Downloadfiles a:hover {
-	box-shadow: 0 0.5em 0.5em -0.4em #ffa260,;
+	box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
+	color: #ffa260;
     transform: translateY(-0.25em);
 }
 
