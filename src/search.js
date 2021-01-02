@@ -3,6 +3,8 @@ script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
   function search(){   
+    var load = document.getElementById('idloader')
+    load.style.display = "flex";
       var movie_name = document.getElementById('movie_input').value
       if(movie_name.length === 0)
       return;
@@ -37,6 +39,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
           // console.log(xy)
           // console.log(xy.type)
           console.log(data)
+          load.style.display = "none";
           
         
           if (request.status >= 200 && request.status < 400) {

@@ -49,7 +49,6 @@ if(document.URL.search("watch") !== -1){
 
         var x = document.getElementById("Downloadfiles");
         x.style.display = "none";
-
         // Stream the file in the browser
         console.log(torrent.announce)
         console.log(torrent.files)
