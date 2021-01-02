@@ -105,13 +105,14 @@ a {
 .footers{
 	display: flex;
 	justify-content: center;
+	align-items: baseline;
 	margin-top: 20px;
 	color: #fff;
 }
 .footers p {
 	margin: 0px;
 }
-.footers a {
+/* .footers a {
 	margin-top: 3px;
-}
+} */
 
