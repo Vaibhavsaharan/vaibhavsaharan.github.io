@@ -2,7 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Movie</title>
+    <title>Watch Movie</title>
+    <!-- <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'> -->
+    <link rel="icon" href="images/ghost.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="player.css">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
     <script src="../dist/bundle.js"></script>
@@ -19,7 +23,7 @@
         
         <div id="progressBar"></div>
         <!-- The video player will be added here -->
-        <video  id="players"  poster="./images/black.jpg" type="video/mp4"></video>
+        <video  id="players"  poster="./images/black2.jpg" type="video/mp4"></video>
       </div>
       <!-- Statistics -->
       <div id="status">
@@ -42,8 +46,18 @@
       </div>
       <div id="Downloadfiles">
         <h2 id="dd" style="display: none;">Download files..</h2>
-        <h2 id="pp" style="display: block;">Please wait...</h2>
+        <div id="pp">
+          <h2 >Please wait</h2>
+          &nbsp; 
+          &nbsp; 
+          <svg class="spinner" width="20px" height="20px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="circle" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg>
+        </div>
       </div>
     </div>
+    <footer class="footers">
+      <p>Powered with ❤ by </p>
+      &nbsp;  
+      <a href="http://webtorrent.io" target="_blank"> Webtorrent</a>
+    </footer>
   </body>
 </html>

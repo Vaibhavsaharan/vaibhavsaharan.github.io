@@ -1,12 +1,17 @@
 body{
-	background-color: black;
+	background-color: #1e2038;
+background-image: url("https://www.transparenttextures.com/patterns/fake-brick.png");
 }
 #output video {
-display: block;
-margin-left: auto;
-margin-right: auto;
-height: 84%;
-width: 74%;
+	margin-top: 55px;
+	margin-bottom: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 74%;
+	box-shadow: rgb(18, 17, 17) 12px 20px 30px -10px;
+
 }
 #progressBar {
 	height: 5px;
@@ -36,7 +41,8 @@ body.is-seed .show-leech {
 	transition: .5s .5s background-color ease-in-out;
 }
 #hero {
-	background-color: #2a3749;
+	background-color: #1e2038;
+	background-image: url("https://www.transparenttextures.com/patterns/fake-brick.png");
 }
 #status {
 	color: #fff;
@@ -54,11 +60,17 @@ a:link, a:visited {
 }
 
 #Downloadfiles{
-	background-color: #2a3750;
-	width: 30%;
+	background-color:transparent;
+	width: 40%;
 	margin-left: auto;
 	margin-right: auto;
 	font: 300 1em 'Fira Sans', sans-serif;
+	box-shadow: rgb(18, 17, 17) 4px 0px 16px 0px;
+}
+@media (max-width: 767px) {
+	#Downloadfiles{
+		width: 60%;
+	}
 }
 #Downloadfiles h2{
 	color: white;
@@ -69,25 +81,16 @@ a:link, a:visited {
 #Downloadfiles a {
 	display: block;
 	background-color: transparent;
-	color: #ffa260;
+	color: #ffffff;
 	padding: 10px;
 	text-decoration: none;
-	text-transform: uppercase;
-	width: fit-content;
 	text-align: center;
 	border: 2px;
 }
 
-
-
-
-a {  
-  color: #ffa260;
-  transition: 0.25s;
-}
-
 #Downloadfiles a:hover {
-	box-shadow: 0 0.5em 0.5em -0.4em #ffa260,;
+	box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
+	color: #ffa260;
     transform: translateY(-0.25em);
 }
 
@@ -98,4 +101,76 @@ a {
 #Downloadfiles a:visited {
 	background-color: #ccc;
 }
+.footers{
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	margin-top: 20px;
+	color: #fff;
+}
+.footers p {
+	margin: 0px;
+}
+/* .footers a {
+	margin-top: 3px;
+} */
 
+.circle
+{
+  stroke-dasharray: 180;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: turn 1.35s ease-in-out infinite;
+  animation: turn 1.35s ease-in-out infinite;
+}
+
+@-webkit-keyframes turn
+{
+  0% {
+    stroke-dashoffset: 180;
+  }
+
+  50% {
+    stroke-dashoffset: 45;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: 180;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes turn
+{
+  0% {
+    stroke-dashoffset: 180;
+  }
+
+  50% {
+    stroke-dashoffset: 45;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: 180;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+svg{
+  stroke: #ffff;
+}
+#pp{
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+}
+#pp h2{
+	margin: 10px 0px;
+}

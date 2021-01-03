@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+:root{
+  --dis: none;
+}
 
 * {
-  font-family: Roboto, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -9,12 +11,18 @@
 html, body {
   width: 100%;
   height: 100%;
-  background: linear-gradient(155deg, #55c7ed, #2bb3e0, #3bc1ed);
+  /* background: linear-gradient(155deg, #55c7ed, #2bb3e0, #3bc1ed); */
+  background-color: #55c7ed;
+  background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
+}
+.flexbox-wrapper{
+  display: flex;
+  flex-direction: column;
 }
 
 .flexbox {
   width: 100%;
-  height: 200px;
+  height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,35 +32,34 @@ html, body {
   margin: 40px;
 }
 
-.search > h3 {
+h3 {
   font-weight: normal;
 }
 
-.search > h1,
-.search > h3 {
+h1,h3 {
   color: white;
   margin-bottom: 15px;
   text-shadow: 0 1px #0091c2;
 }
 
-.search > div {
-  display: inline-block;
+.sbox > div {
   position: relative;
   filter: drop-shadow(0 1px #0091c2);
 }
 
-.search > div:after {
+#line {
   content: "";
   background: white;
   width: 4px;
   height: 20px;
-  position: absolute;
-  top: 40px;
-  right: 2px;
   transform: rotate(135deg);
+  position: relative;
+  left: 38px;
+  transition: transform 0.5s ;
+  top: -8px;
 }
 
-.search > div > input {
+.sbox > div > input {
   color: white;
   font-size: 16px;
   background: transparent;
@@ -65,19 +72,53 @@ html, body {
   transition: width 0.5s;
 }
 
-.search > div > input::placeholder {
+.sbox > div > input::placeholder {
   color: #efefef;
   opacity: 0;
   transition: opacity 150ms ease-out;
 }
 
-.search > div > input:focus::placeholder {
+
+.sbox > div > input:focus::placeholder {
   opacity: 1;
 }
 
-.search > div > input:focus,
-.search > div > input:not(:placeholder-shown) {
+.sbox > div > input:focus,
+.sbox > div > input:not(:placeholder-shown) {
   width: 250px;
+}
+
+#movie_input:focus + #line{
+  transform: translateX(210px) rotate(135deg);
+  /* left: 0px; */
+}
+#movie_input:not(:placeholder-shown) + #line{
+  transform: translateX(210px) rotate(135deg);
+}
+
+.sbox{
+  display: inline-flex;
+}
+.example_e {
+  margin-left: 30px;
+  border: none;
+  background: #ffffff;
+  color: #353535 !important;
+  font-weight: 500;
+  padding: 11px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+.example_e:hover {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
 }
 
 *{
@@ -97,13 +138,133 @@ h2{
     color: white;
     padding: 30px 0;
 }
+.option-wrapper{
+  display: flex;
+}
+#option{
+  margin: 8px 8px 0 15px;
+}
+#option select{
+  width: 100%;
+  color: #353030;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 20px;
+  border: 0.5px;
+  border-radius: 0.25em;
+  padding: 6px 6px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: linear-gradient(to top,#2bb3e0,#55c7ed 33%);
+  appearance: menulist-button;
+  outline: none;
+  margin-top: -3px;
+}
+
+input {
+  padding: 3px;
+  background-color: #31a8cf;
+  color: white;
+  box-shadow: 0 1px 2px -4px;
+  border: none;
+}
+
+.spinner
+{
+  -webkit-animation: rotation 1.35s linear infinite;
+  animation: rotation 1.35s linear infinite;
+}
+
+@-webkit-keyframes rotation
+{
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes rotation
+{
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+.loader{
+  background-color: transparent;
+  display: none;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.circle
+{
+  stroke-dasharray: 180;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: turn 1.35s ease-in-out infinite;
+  animation: turn 1.35s ease-in-out infinite;
+}
+
+@-webkit-keyframes turn
+{
+  0% {
+    stroke-dashoffset: 180;
+  }
+
+  50% {
+    stroke-dashoffset: 45;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: 180;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+
+@keyframes turn
+{
+  0% {
+    stroke-dashoffset: 180;
+  }
+
+  50% {
+    stroke-dashoffset: 45;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: 180;
+    -webkit-transform: rotate(450deg);
+    transform: rotate(450deg);
+  }
+}
+svg{
+  stroke: #ffff;
+}
 
 /* Table Styles */
 
 .table-wrapper{
-    margin: 10px 70px 70px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    border-radius: 5px;
+
 }
+
 
 .fl-table {
     border-radius: 5px;
@@ -111,11 +272,31 @@ h2{
     font-weight: normal;
     border: none;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
     max-width: 100%;
     white-space: nowrap;
-    background-color: linear-gradient(155deg, #55c7ed, #2bb3e0, #3bc1ed);
-    background: transparent;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #55c7ed; */
+    /* background: transparent; */
+}
+
+.fl-table:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  filter: blur(6px);
+  margin: -20px;
 }
 
 .fl-table td, .fl-table th {
@@ -126,7 +307,7 @@ h2{
 .fl-table td {
     border-right: 1px solid #f8f8f8;
     font-size: 16px;
-    background: transparent;
+    /* background: transparent; */
 }
 
 .fl-table thead th {
@@ -138,17 +319,25 @@ h2{
 /* Responsive */
 
 @media (max-width: 767px) {
+    #root{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .fl-table {
         display: block;
         width: 100%;
     }
     .table-wrapper:before{
         content: "Scroll horizontally >";
-        display: block;
+        display: var(--dis);
         text-align: right;
         font-size: 11px;
         color: white;
         padding: 0 0 10px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .fl-table thead, .fl-table tbody, .fl-table thead th {
         display: block;
