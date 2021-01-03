@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "jquery": "^3.5.1",
+    "peerflix": "^0.39.0",
     "plyr": "^3.6.3",
     "pretty-bytes": "^5.5.0",
     "webtorrent-hybrid": "^4.0.3"
