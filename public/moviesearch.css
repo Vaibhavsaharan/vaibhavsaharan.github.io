@@ -116,8 +116,6 @@ h1,h3 {
   font-weight: 700 !important;
   letter-spacing: 3px;
   background: none;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   transition: all 0.3s ease 0s;
 }
 
@@ -257,6 +255,57 @@ svg{
   stroke: #ffff;
 }
 
+.movie-info-wrapper{
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.info-wrapper{
+  display: flex;
+  flex-direction: column;
+  /* background-color: #333030; */
+  background-color: transparent;
+  overflow: hidden;
+  height: 480px;
+  min-width: 400px;
+  color: #f8f8f8;
+}
+.trailer-wrapper iframe{
+  height: 480px;
+  width: 854px;
+}
+.poster-wrapper{
+  display: flex;
+  padding: 10px;
+}
+.poster-wrapper img{
+  
+  height: 250px;
+  width: auto;
+}
+.name-wrapper{
+  font-size: 40px;
+  margin-left: 15px;
+  margin-bottom: 40px;
+}
+#got_movie_name{
+  font-size: 27px;
+  padding: 0px;
+  margin: 10px 0px;
+}
+#got_year{
+  font-size: 20px;
+}
+.plot-info-wrapper{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 480px;
+}
+.hrclass{
+  border-top: 1px solid #8c8b8b;
+}
 /* Table Styles */
 
 .table-wrapper{
@@ -317,8 +366,157 @@ svg{
 }
 
 /* Responsive */
+@media screen and (min-width:853px) and (max-width:1250px){
+  .movie-info-wrapper{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 854px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .trailer-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  .info-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    width: inherit;
+    height: 300px;
+    color: #f8f8f8;
+  }
+  .trailer-wrapper iframe{
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .poster-wrapper{
+    display: flex;
+    padding: 10px;
+  }
+  .poster-wrapper img{
+    height: 250px;
+    width: auto;
+  }
+  .name-wrapper{
+    font-size: 40px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+  }
+  #got_movie_name{
+    font-size: 27px;
+    padding: 0px;
+    margin: 10px 0px;
+  }
+  #got_year{
+    font-size: 20px;
+  }
+  .plot-info-wrapper{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+  }
+  .hrclass{
+    width: 1px;
+    border: #f8f8f8 solid 1px;
+    height: 300px;
+    display: inline-block;
+  }
+}
 
+@media (max-width: 853px) {
+   
+  .movie-info-wrapper{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .trailer-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  .info-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    color: #f8f8f8;
+  }
+  .trailer-wrapper iframe{
+    height: 56.25vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .poster-wrapper{
+    display: flex;
+    padding: 10px;
+  }
+  .poster-wrapper img{
+    width: 30vw;
+    max-height: 200px;
+    max-width: 100px;
+    height: auto;
+  }
+  .name-wrapper{
+    font-size: 40px;
+    margin-left: 15px;
+    margin-bottom: 40px;
+  }
+  #got_movie_name{
+    font-size: 27px;
+    padding: 0px;
+    margin: 10px 0px;
+  }
+  #got_year{
+    font-size: 20px;
+  }
+  .plot-info-wrapper{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .hrclass{
+    width: 1px;
+    border: #f8f8f8 solid 1px;
+    height: 300px;
+    display: inline-block;
+  }
+}
+@media (max-width:540px){
+  .info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    color: #f8f8f8;
+  }
+  .poster-wrapper{
+    display: flex;
+    padding: 10px;
+    margin-top: -50px;
+  }
+  .hrclass{
+    border-top: 1px solid #8c8b8b;
+    width: 100%;
+    height: 1px;
+  }
+
+}
 @media (max-width: 767px) {
+ 
     #root{
       width: 100%;
       margin-left: auto;
