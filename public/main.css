@@ -2,6 +2,11 @@ html{
     scroll-behavior: smooth;
 }
 
+@font-face{
+    font-family: cyberfont;
+    src: url(../Cyberpunk/Cyberpunk.ttf);
+}
+
 body{
     margin: 0px;
     height: 100%;
@@ -85,6 +90,7 @@ body{
 
 #name{
     font-weight: 600;
+    /* font-family: cyberfont; */
     font-size: 70px;
     color: rgb(222, 253, 253);
 }
