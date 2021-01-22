@@ -33,21 +33,7 @@ function defer() {
           var styleElem = document.head.appendChild(document.createElement("style"));
           styleElem.innerHTML = ".table-wrapper:before {display: block;}";
         }
-        var table = document.getElementById("movietable");
-        table.innerHTML = "";
-        var row = table.insertRow(0)
-        var srno = row.insertCell(0);
-        var name = row.insertCell(1);
-        var size = row.insertCell(2);
-        var seed = row.insertCell(3);
-        var peer = row.insertCell(4);
-        var play = row.insertCell(5);
-        srno.innerHTML = "SR No";
-        name.innerHTML = "Name";
-        size.innerHTML = "Size";
-        seed.innerHTML = "Seeds";
-        peer.innerHTML = "Peers";
-        play.innerHTML = "Action";
+        
         if(this.response!=="Error"){
           var data = JSON.parse(this.response)
           console.log(data)
@@ -57,7 +43,22 @@ function defer() {
         load.style.display = "none";
         
       
-        if (request.status >= 200 && request.status < 400) {
+        if (request.status >= 200 && request.status < 400 && data) {
+          var table = document.getElementById("movietable");
+          table.innerHTML = "";
+          var row = table.insertRow(0)
+          var srno = row.insertCell(0);
+          var name = row.insertCell(1);
+          var size = row.insertCell(2);
+          var seed = row.insertCell(3);
+          var peer = row.insertCell(4);
+          var play = row.insertCell(5);
+          srno.innerHTML = "SR No";
+          name.innerHTML = "Name";
+          size.innerHTML = "Size";
+          seed.innerHTML = "Seeds";
+          peer.innerHTML = "Peers";
+          play.innerHTML = "Action";
           var i = 1
           var j = 1
           for(i=0;i<data.length;i++) {
