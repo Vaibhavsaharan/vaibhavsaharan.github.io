@@ -1,5 +1,8 @@
 // console.log(document.URL)
 if(document.URL.search("watch") !== -1){
+
+    
+
     var moment = require('moment')
     var prettyBytes = require('pretty-bytes')
     window.$ = window.jQuery = require('jquery')
@@ -7,6 +10,13 @@ if(document.URL.search("watch") !== -1){
     var torrentId = sessionStorage.getItem("magnet")
     console.log("received " + torrentId);
     var client = new WebTorrent()
+
+    $(document).ready(function () {
+        setTimeout(function(){
+            console.log("Having problem in viewing video?")
+            $('#imdbp').fadeIn(500);
+        }, 10000);
+    });
 
 
     var announceList = [
@@ -111,4 +121,5 @@ if(document.URL.search("watch") !== -1){
         }
         
     })
+    
 }

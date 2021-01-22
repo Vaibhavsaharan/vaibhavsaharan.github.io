@@ -59,5 +59,13 @@
       &nbsp;  
       <a href="http://webtorrent.io" target="_blank"> Webtorrent</a>
     </footer>
+    <script>
+      function imdbplayp(){
+          var e = sessionStorage.getItem("imdb")
+          console.log(e)
+          var link = "https://databasegdriveplayer.co/player.php?imdb=" + e
+          window.open(link)
+      }
+    </script>
   </body>
 </html>

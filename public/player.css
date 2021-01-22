@@ -171,6 +171,31 @@ svg{
 	justify-content: center;
 	align-items: baseline;
 }
+#pp :nth-child(3){
+	align-items: unset;
+	position: absolute;
+	margin-left: 240px;
+	margin-top: 6px;
+	border: 2px solid white;
+}
+
+#pp :nth-child(3):hover{
+	transition: ease-in;
+	background-color: white;
+	color: #1e2038;
+	size: 20px;
+}
+
 #pp h2{
 	margin: 10px 0px;
 }
+
+.imdb-btn{
+	padding: 3px;
+	background-color: transparent;
+	color: #fff;
+	display: none;
+	margin-left: 12px;
+}
+
+

@@ -144,6 +144,7 @@ function movinfo(e){
     document.getElementById('got_movie_name').innerHTML = response.title
     document.getElementById('got_movie_plot').innerText = response.plot
     document.getElementById('got_year').innerText = response.year
+    sessionStorage.setItem("imdb",response.id);
     getVideo()
     function getVideo() {
       $.ajax({
@@ -172,4 +173,11 @@ function movinfo(e){
 function gein(m){
   sessionStorage.setItem("magnet",m);
   window.location.href="./watchmovie.html";
+}
+
+function imdbplay(){
+  var e = sessionStorage.getItem("imdb")
+  console.log(e)
+  var link = "https://databasegdriveplayer.co/player.php?imdb=" + e
+  window.open(link)
 }
