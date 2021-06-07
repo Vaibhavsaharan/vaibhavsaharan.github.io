@@ -1,0 +1,36 @@
+[
+    {
+        "pid" : 1,
+        "project-name" : "Unified Interface for CFD Softwares",
+        "tech-used" : [
+            "python",
+            "tkinter"
+        ],
+        "github-link" : "https://github.com/Vaibhavsaharan/Unified-Interface-for-CFD-Softwares",
+        "live-link" : ""
+    },
+    {
+        "pid" : 2,
+        "project-name" : "Regional Transport Office Management System",
+        "tech-used" : [
+            "C#",
+            "MS-SQL",
+            "VS2019",
+            ".NET Framework"
+        ],
+        "github-link" : "https://github.com/Vaibhavsaharan/RTOMS",
+        "live-link" : ""        
+    },
+    {
+        "pid" : 3,
+        "project-name" : "BitTorrent Client for IIT Mandi",
+        "tech-used" : [
+            "BitTorrent Protocol",
+            "python",
+            "Distributed Systems",
+            "Virtual Box"
+        ],
+        "github-link" : "",
+        "live-link" : ""        
+    }
+]
